@@ -30,17 +30,41 @@ random.shuffle(symbols)
 
 print(letters)
 
+# add a letter to the total based on the number the user entered
 for letter in range(0, nr_letters):
-    rand_number = random.randint(0, 51)
+    # determine the length of the list
+    length = len(letters) - 1
+    # generate a random number based on the amount of lower case and uppercase letters -1
+    rand_number = random.randint(0, length)
+    # pull a random letter from the list
     let = letters[rand_number]
+    # increment the string
     total += let
+
+# add a number to the total based on the number the user entered
 for number in range(0, nr_numbers):
-    rand_number = random.randint(0, 8)
+    # determine the length of the list
+    length = len(numbers) - 1
+    # generate a random number based on the amount of integers in the list -1
+    rand_number = random.randint(0, length)
+    # pull a random number from the list
     num = numbers[rand_number]
+    # increment the string
     total += num
+
+# add a symbol to the total based on the number the user entered
 for symbol in range(0, nr_symbols):
-    rand_number = random.randint(0, 7)
+    # determine the length of the list
+    length = len(symbols) - 1
+    # generate a random symbol based on the amount of symbols in the list -1
+    rand_number = random.randint(0, length)
+    # pull a random symbol from the list
     sym = symbols[rand_number]
+    # increment the string
     total += sym
+
+# create a new line
 print("\n")
-print(''.join(random.sample(total, len(total))))
+
+# shuffle the total string and print the password
+print("You password is: " + ''.join(random.sample(total, len(total))))
