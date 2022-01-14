@@ -28,7 +28,6 @@ random.shuffle(letters)
 random.shuffle(numbers)
 random.shuffle(symbols)
 
-print(letters)
 
 # add a letter to the total based on the number the user entered
 for letter in range(0, nr_letters):
